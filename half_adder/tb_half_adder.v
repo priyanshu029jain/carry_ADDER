@@ -1,3 +1,5 @@
+`include "half_adder/half_adder.v"
+
 module tb_half_adder;
   reg A, B;
   wire S,C;

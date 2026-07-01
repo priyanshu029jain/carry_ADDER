@@ -1,8 +1,10 @@
-# Entity: half_adder 
+# Entity: half_adder  
+
 - **File**: half_adder.v
 
 ## Diagram
-![Diagram](half_adder_schematic.png "RTL Primitive Layout")
+
+![Diagram](/half_adder/image/half_adder_schematic.png"RTL Primitive Layout")
 
 ## Ports
 
@@ -36,16 +38,18 @@ The implementation was analyzed under standard environmental conditions ($25^\ci
 ## Physical Implementation & Silicon Mapping Layouts
 
 ### A. Physical Package Pin Routing
+
 The layout of the hardware package die displaying the localized routing of active external output pins for Sum (`S`) and Carry (`C`):
-![Package Pin View](half_adder_pin_mapping.png)
+![Package Pin View](/half_adder/image/half_adder_pin_mapping.png)
 
 ### B. FPGA Fabric Floorplan Utilization
+
 The physical coordinates and absolute logic footprint of the implementation relative to the overall Artix-7 silicon substrate:
-![FPGA Die Floorplan](half_adder_floorplan.png)
+![FPGA Die Floorplan](/half_adder/image/half_adder_floorplan.png)
 
 ## Reproducibility & Raw Verification Data
 
 The unedited raw report text logs generated directly by Vivado's core hardware execution engines are fully available for verification:
-* 📄 [Propagation Delay & Timing Report](half_adder_timing_report.txt)
-* 📄 [Thermal Power Distribution Report](half_adder_power_report.txt)
-* 📄 [Hardware Resource Utilization Report](half_adder_utilization_report.txt)
+* 📄 [Propagation Delay & Timing Report](/half_adder/report/half_adder_timing_report.txt)
+* 📄 [Thermal Power Distribution Report](/half_adder/report/half_adder_power_report.txt)
+* 📄 [Hardware Resource Utilization Report](/half_adder/report/half_adder_utilization_report.txt)
