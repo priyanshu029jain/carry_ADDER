@@ -1,0 +1,10 @@
+# Ignore Icarus Verilog compiled simulation executables
+*.vvp
+*.out
+
+# Ignore hardware simulation waveform dump tracking databases
+*.vcd
+
+# Optional: Ignore temporary OS clutter files
+.DS_Store
+Thumbs.db
