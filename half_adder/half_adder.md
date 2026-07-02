@@ -4,7 +4,7 @@
 
 ## Diagram
 
-![Diagram](/half_adder/image/half_adder_schematic.png"RTL Primitive Layout")
+![Diagram](/half_adder/image/half_adder_schematic.png "RTL Primitive Layout")
 
 ## Ports
 
