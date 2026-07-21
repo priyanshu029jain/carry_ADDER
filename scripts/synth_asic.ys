@@ -1,0 +1,23 @@
+# 1. Read Verilog RTL design
+read_verilog ../Carry_lockAhead_adder/Carry_lookAhead_adder.v
+
+# 2. Elaborate hierarchy
+hierarchy -top Carry_lookAhead_adder
+
+# 3. High-level optimizations & process elaboration
+proc; opt; fsm; opt; memory; opt
+
+# 4. Map RTL operators to Yosys internal gate library (CRITICAL STEP!)
+techmap; opt
+
+# 5. Technology mapping to Sky130 standard cells via ABC
+abc -liberty sky130.lib
+
+# 6. Clean up netlist
+opt_clean -purge
+
+# 7. Print Area & Gate Count Summary
+stat -liberty sky130.lib
+
+# 8. Output mapped gate-level netlist
+write_verilog -noattr gate_level_cla.v
