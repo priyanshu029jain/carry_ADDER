@@ -14,11 +14,14 @@ techmap; opt
 # 5. Map to Sky130 with ABC (Requesting delay reporting)
 abc -liberty sky130.lib -D 10000
 
+# Generate a Graphviz dot schematic file
+show -format dot -prefix reports/cla_schematic Carry_lookAhead_adder
+
 # 6. Clean up netlist
 opt_clean -purge
 
-# 7. Print Final Standard Cell Area Report
-stat -liberty sky130.lib
+# 7. Print and save Final Standard Cell Area Report to file
+tee -o reports/synthesis_report.txt stat -liberty sky130.lib
 
 # 8. Output mapped gate-level netlist
-write_verilog -noattr gate_level_cla.v
+write_verilog -noattr gate_level_cla.v 
