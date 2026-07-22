@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal -sv Carry_lookAhead_adder.v
+prep -top Carry_lookAhead_adder
+
+[files]
+Carry_lookAhead_adder.v

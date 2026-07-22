@@ -53,4 +53,12 @@ module Carry_lookAhead_adder(
     xor s2(S[2], P[2], c2);
     xor s3(S[3], P[3], c3);
 
+    `ifdef FORMAL
+  // Formal Property: Mathematically verifies {Cout, S} == A + B + Cin for ALL inputs
+  always @(*) begin
+    assert ({Cout, S} == A + B + Cin);
+  end
+`endif
+  
 endmodule
+
