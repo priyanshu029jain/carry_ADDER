@@ -1,8 +1,0 @@
-# running in cla_formal/src/
-read -formal -sv Carry_lookAhead_adder.v
-prep -top Carry_lookAhead_adder
-
-hierarchy -smtcheck
-rename -witness
-write_jny -no-connections ../model/design.json
-write_rtlil ../model/design.il

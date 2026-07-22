@@ -1,10 +1,15 @@
-# Ignore Icarus Verilog compiled simulation executables
-*.vvp
-*.out
+# Verilator outputs
+obj_dir/
+logs/
+coverage_html/
 
-# Ignore hardware simulation waveform dump tracking databases
+# SymbiYosys formal outputs
+cla_formal/
+
+# Simulation build artifacts & waveforms
 *.vcd
-
-# Optional: Ignore temporary OS clutter files
-.DS_Store
-Thumbs.db
+*.vvp
+*.log
+*.info
+*.dat
+EOF
