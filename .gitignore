@@ -12,4 +12,5 @@ cla_formal/
 *.log
 *.info
 *.dat
+*.out
 EOF
