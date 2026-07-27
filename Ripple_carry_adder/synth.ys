@@ -1,0 +1,19 @@
+# 1. Read Liberty Library & RTL files
+read_liberty -lib ../Carry_lockAhead_adder/scripts/sky130.lib
+read_verilog ../full_adder_with_xor/full_adder3.v
+read_verilog Ripple_carry_adder.v
+
+# 2. Check Hierarchy & Synthesize
+hierarchy -top Ripple_carry_adder
+synth -top Ripple_carry_adder
+
+# 3. Technology Mapping to Sky130 Standard Cells
+dfflibmap -liberty ../Carry_lockAhead_adder/scripts/sky130.lib
+abc -liberty ../Carry_lockAhead_adder/scripts/sky130.lib
+
+# 4. Clean and Print Area Report
+clean
+stat -liberty ../Carry_lockAhead_adder/scripts/sky130.lib
+
+# 5. Write Netlist for Timing/Power
+write_verilog -noattr rca_mapped.v
