@@ -1,4 +1,4 @@
-`include "full_adder_with_xor/full_adder3.v"
+//`include "full_adder_with_xor/full_adder3.v"
 
 module Ripple_carry_adder(
     input  wire [3:0] A,

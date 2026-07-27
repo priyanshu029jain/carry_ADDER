@@ -4,7 +4,8 @@ logs/
 coverage_html/
 
 # SymbiYosys formal outputs
-*_formal/
+cla_formal/
+formal_rca/
 
 # Simulation build artifacts & waveforms
 *.vcd

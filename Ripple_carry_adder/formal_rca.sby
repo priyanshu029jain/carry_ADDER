@@ -1,0 +1,15 @@
+[options]
+mode prove
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal full_adder3.v Ripple_carry_adder.v
+read_verilog -formal -sv formal_RCA.sv
+prep -top formal_RCA
+
+[files]
+Ripple_carry_adder.v
+formal_RCA.sv
+../full_adder_with_xor/full_adder3.v
