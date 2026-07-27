@@ -1,0 +1,64 @@
+OpenSTA 2.0.17 GITDIR-NOT Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+
+=========================================
+          MAX TIMING PATH REPORT         
+=========================================
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Cout (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap   Delay    Time   Description
+---------------------------------------------------------------------
+                 0.00    0.00   clock clk (rise edge)
+                 0.00    0.00   clock network delay (ideal)
+                 1.00    1.00 v input external delay
+                 0.00    1.00 v Cin (in)
+    2    0.01                   Cin (net)
+                 0.00    1.00 v FA1/_0_/C (sky130_fd_sc_hd__maj3_1)
+                 0.36    1.37 v FA1/_0_/X (sky130_fd_sc_hd__maj3_1)
+    2    0.01                   c1 (net)
+                 0.00    1.37 v FA2/_0_/C (sky130_fd_sc_hd__maj3_1)
+                 0.39    1.76 v FA2/_0_/X (sky130_fd_sc_hd__maj3_1)
+    2    0.01                   c2 (net)
+                 0.00    1.76 v FA3/_0_/C (sky130_fd_sc_hd__maj3_1)
+                 0.39    2.15 v FA3/_0_/X (sky130_fd_sc_hd__maj3_1)
+    2    0.01                   c3 (net)
+                 0.00    2.15 v FA4/_0_/C (sky130_fd_sc_hd__maj3_1)
+                 0.33    2.49 v FA4/_0_/X (sky130_fd_sc_hd__maj3_1)
+    1    0.00                   Cout (net)
+                 0.00    2.49 v Cout (out)
+                         2.49   data arrival time
+
+                10.00   10.00   clock clk (rise edge)
+                 0.00   10.00   clock network delay (ideal)
+                 0.00   10.00   clock reconvergence pessimism
+                -1.00    9.00   output external delay
+                         9.00   data required time
+---------------------------------------------------------------------
+                         9.00   data required time
+                        -2.49   data arrival time
+---------------------------------------------------------------------
+                         6.51   slack (MET)
+
+
+
+=========================================
+          POWER CONSUMPTION REPORT       
+=========================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   7.50e-07   6.92e-11   7.50e-07 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   7.50e-07   6.92e-11   7.50e-07 100.0%
+                           0.0%     100.0%       0.0%
+[?2004hOpenSTA> 
